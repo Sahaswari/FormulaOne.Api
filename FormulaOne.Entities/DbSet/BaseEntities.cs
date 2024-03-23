@@ -10,7 +10,7 @@ namespace FormulaOne.Entities.DbSet
     {
         public Guid Id { get; set; } = Guid.NewGuid(); //initializze it as newGuid
         public DateTime AddedDate { get; set; } = DateTime.UtcNow;
-        public DateTime UpdateedDate { get; set; } = DateTime.UtcNow;
+        public DateTime UpdatedDate { get; set; } = DateTime.UtcNow;
         public int Status { get; set; }
     }
 }

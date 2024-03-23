@@ -9,6 +9,6 @@ namespace FormulaOne.DataService.Repositories.Interfaces
 {
     public interface IAchevementsRepository : IGenericRepository<Achievement>
     {
-        Task <Achievement> GetAchievementAsync (Guid driverId);
+        Task <Achievement?> GetAchievementAsync (Guid driverId);
     }
 }

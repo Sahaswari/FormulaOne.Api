@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FormulaOne.Entities")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+560ac55d41480f7ccdd93adf384a6915d87ccefb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b25ac5784d9f169aff31fd05b163b40899e34737")]
 [assembly: System.Reflection.AssemblyProductAttribute("FormulaOne.Entities")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FormulaOne.Entities")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

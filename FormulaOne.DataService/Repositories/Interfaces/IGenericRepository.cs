@@ -15,6 +15,6 @@ namespace FormulaOne.DataService.Repositories.Interfaces
         Task <bool> Add(T entity);
         Task<bool> Update(T entity);
         Task<bool> Delete(Guid id);
-        
+        Task<Achievement> GetDriverAchievementAsync(Guid driverId);
     }
 }

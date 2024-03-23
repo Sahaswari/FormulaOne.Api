@@ -6,17 +6,37 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace FormulaOne.DataService.Repositories
 {
-    public class DriverRepository : GenericRepository<Driver>, IDriverRepository
+    public class AchievementRepository : GenericRepository<Achievement>, IAchevementsRepository
     {
-        public DriverRepository(AppDbContext context, ILogger logger) : base(context, logger) { }
+        public AchievementRepository(AppDbContext context, ILogger logger) : base(context, logger)
+        {
+        }
 
-        public async Task<IEnumerable<Driver>> All()
+        public async Task<Achievement?> GetDriverAchievementAsync(Guid driverId)
+        {
+            try
+            {
+                return await _dbSet.FirstOrDefaultAsync(x => x.DriverId == driverId);
+
+            }
+            catch (Exception e) 
+            {
+                _logger.LogError(e, "{Repo} GetDriverAchievementAsync function error", typeof(AchievementRepository));
+                throw;
+            }
+        }
+
+        Task<Achievement> IAchevementsRepository.GetAchievementAsync(Guid driverId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public async Task<IEnumerable<Achievement>> All()
         {
             try
             {
@@ -28,9 +48,9 @@ namespace FormulaOne.DataService.Repositories
             }
             catch (Exception e)
             {
-                _logger.LogError(e, "{Repo} All function error", typeof(DriverRepository));
+                _logger.LogError(e, "{Repo} All function error", typeof(AchievementRepository));
                 throw;
-                
+
             }
         }
 
@@ -40,7 +60,7 @@ namespace FormulaOne.DataService.Repositories
             {
                 //get my entity
                 var result = await _dbSet.FirstOrDefaultAsync(x => x.Id == id);
-                
+
                 if (result == null)
                     return false;
 
@@ -51,26 +71,26 @@ namespace FormulaOne.DataService.Repositories
             }
             catch (Exception e)
             {
-                _logger.LogError(e, "{Repo} Delete function error", typeof(DriverRepository));
+                _logger.LogError(e, "{Repo} Delete function error", typeof(AchievementRepository));
                 throw;
             }
         }
 
-        public override async Task<bool> Update(Driver driver)
+        public override async Task<bool> Update(Achievement achievement)
         {
             try
             {
                 //get my entity
-                var result = await _dbSet.FirstOrDefaultAsync(x => x.Id == driver.Id);
+                var result = await _dbSet.FirstOrDefaultAsync(x => x.Id == achievement.Id);
 
                 if (result == null)
                     return false;
 
                 result.UpdatedDate = DateTime.UtcNow;
-                result.DriverNumber = driver.DriverNumber;
-                result.FirstName = driver.FirstName;
-                result.LastName = driver.LastName;
-                result.DateofBirth = driver.DateofBirth;
+                result.PolePosition = achievement.PolePosition;
+                result.FastestLap = achievement.FastestLap;
+                result.WorldChampionship = achievement.WorldChampionship;
+                result.RaceWins = achievement.RaceWins;
 
                 return true;
             }
@@ -79,6 +99,7 @@ namespace FormulaOne.DataService.Repositories
                 _logger.LogError(e, "{Repo} Update function error", typeof(DriverRepository));
                 throw;
             }
-        }
+        
     }
+}
 }
