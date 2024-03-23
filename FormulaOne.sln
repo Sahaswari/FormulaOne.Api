@@ -3,31 +3,22 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormulaOne.Api", "FormulaOne.Api\FormulaOne.Api.csproj", "{DCA70FEF-63AC-4552-B5DE-1A6343E54F78}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FormulaOne.Api", "FormulaOne.Api\FormulaOne.Api.csproj", "{DCA70FEF-63AC-4552-B5DE-1A6343E54F78}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormularOne.Entities", "FormularOne.Entities\FormularOne.Entities.csproj", "{C258B310-5E1E-4C16-A7EC-7B5154168653}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FormulaOne.DataService", "FormulaOne.DataService\FormulaOne.DataService.csproj", "{7F216467-D1F3-400D-9738-E9E9EFA60639}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormulaOne.DataService", "FormulaOne.DataService\FormulaOne.DataService.csproj", "{7F216467-D1F3-400D-9738-E9E9EFA60639}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormulaOne.Entities", "FormulaOne.Entities\FormulaOne.Entities.csproj", "{D7011941-A148-45DC-A436-CA50446DC345}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FormulaOne.Entities", "FormulaOne.Entities\FormulaOne.Entities.csproj", "{D7011941-A148-45DC-A436-CA50446DC345}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{DCA70FEF-63AC-4552-B5DE-1A6343E54F78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DCA70FEF-63AC-4552-B5DE-1A6343E54F78}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DCA70FEF-63AC-4552-B5DE-1A6343E54F78}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DCA70FEF-63AC-4552-B5DE-1A6343E54F78}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C258B310-5E1E-4C16-A7EC-7B5154168653}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C258B310-5E1E-4C16-A7EC-7B5154168653}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C258B310-5E1E-4C16-A7EC-7B5154168653}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C258B310-5E1E-4C16-A7EC-7B5154168653}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7F216467-D1F3-400D-9738-E9E9EFA60639}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7F216467-D1F3-400D-9738-E9E9EFA60639}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7F216467-D1F3-400D-9738-E9E9EFA60639}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -36,5 +27,8 @@ Global
 		{D7011941-A148-45DC-A436-CA50446DC345}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D7011941-A148-45DC-A436-CA50446DC345}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D7011941-A148-45DC-A436-CA50446DC345}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 EndGlobal

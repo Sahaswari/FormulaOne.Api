@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace FormulaOne.Entities.DbSet
 {
-    public class BaseEntities
+    public class BaseEntities //basic defines, common variables
     {
-        public Guid Id { get; set; } = Guid.NewGuid();
+        public Guid Id { get; set; } = Guid.NewGuid(); //initializze it as newGuid
         public DateTime AddedDate { get; set; } = DateTime.UtcNow;
         public DateTime UpdateedDate { get; set; } = DateTime.UtcNow;
         public int Status { get; set; }

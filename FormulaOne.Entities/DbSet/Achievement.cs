@@ -12,9 +12,9 @@ namespace FormulaOne.Entities.DbSet
 
         public int PolePosition { get; set; }
 
-        public int Fastestlap { get; set; }
+        public int FastestLap { get; set; }
 
-        public int worldChampionship { get; set; }
+        public int WorldChampionship { get; set; }
         public Guid DriverId { get; set; }
 
         public virtual Driver? Driver { get; set; }
