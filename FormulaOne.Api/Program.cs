@@ -3,6 +3,8 @@ using System;
 using Microsoft.Extensions.DependencyInjection;
 using FormulaOne.DataService.Data;
 using Microsoft.EntityFrameworkCore;
+using FormulaOne.DataService.Repositories.Interfaces;
+using FormulaOne.DataService.Repositories;
 //using FormulaOne.DataService.Data;
 
 
@@ -14,10 +16,15 @@ var ConnectionStrings = builder.Configuration.GetConnectionString("DefaultConnec
 //Initialising my DbContext inside the DI Container
 builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlite(ConnectionStrings));
 
+builder.Services.AddControllers();
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
+builder.Services.AddScoped<IUnitofWork, UnitofWork>();
 
 var app = builder.Build();
 

@@ -131,3 +131,5 @@ E:\Projects\Project\baseApp\FormulaOne.Api\bin\Debug\net8.0\FormulaOne.DataServi
 E:\Projects\Project\baseApp\FormulaOne.Api\bin\Debug\net8.0\FormulaOne.Entities.dll
 E:\Projects\Project\baseApp\FormulaOne.Api\bin\Debug\net8.0\FormulaOne.DataService.pdb
 E:\Projects\Project\baseApp\FormulaOne.Api\bin\Debug\net8.0\FormulaOne.Entities.pdb
+E:\Projects\Project\baseApp\FormulaOne.Api\bin\Debug\net8.0\AutoMapper.dll
+E:\Projects\Project\baseApp\FormulaOne.Api\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
