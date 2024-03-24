@@ -3,11 +3,6 @@ using FormulaOne.DataService.Repositories.Interfaces;
 using FormulaOne.Entities.DbSet;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FormulaOne.DataService.Repositories
 {
@@ -31,9 +26,17 @@ namespace FormulaOne.DataService.Repositories
             }
         }
 
-        Task<Achievement> IAchevementsRepository.GetAchievementAsync(Guid driverId)
+        async Task<Achievement> IAchevementsRepository.GetAchievementAsync(Guid driverId)
         {
-            throw new NotImplementedException();
+            try
+            {
+                return await _dbSet.FirstOrDefaultAsync(x => x.DriverId == driverId);
+            }
+            catch (Exception e)
+            {
+                _logger.LogError(e, "{Repo} GetDriverAchievementAsync function error", typeof(AchievementRepository));
+                throw;
+            }
         }
 
         public async Task<IEnumerable<Achievement>> All()
